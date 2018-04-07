@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.medicus.medicus.Appointment_calender">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:progressDrawable="@drawable/circular_progress_bar" />
+    <RadioGroup
+        android:id="@+id/slots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <RadioButton
+            android:id="@+id/morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning" />
+
+        <RadioButton
+            android:id="@+id/afternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Afternoon" />
+
+        <RadioButton
+            android:id="@+id/evening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evening" />
+    </RadioGroup>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slots"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:datePickerMode="calendar"
+        android:scaleY="1" />
+
+    <RelativeLayout
+        android:id="@+id/slotInfo"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/Bokbutton">
+
+        <TextView
+            android:id="@+id/available_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:text="Available Slots: " />
+
+        <TextView
+            android:id="@+id/avail_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/available_slots" />
+
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/black"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/total_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/divider"
+            android:text="Total Slots:" />
+
+        <TextView
+            android:id="@+id/total_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/total_slot" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Bokbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/gradient_background"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="Get Appointment"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

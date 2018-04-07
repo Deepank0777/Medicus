@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.medicus.medicus.Reminder">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/doc_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Doctor  Name"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/timings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doc_name"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/divider"
+            android:text="Your Scheduled Time"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/starting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/start_time"
+            android:layout_toLeftOf="@+id/divider"
+            android:text="3:15"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="60sp" />
+        <TextView
+            android:id="@+id/amopm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/divider"
+            android:layout_below="@id/starting"
+            android:text="PM"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/black"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/divider"
+            android:text="Your Estimated Time"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/ending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/end_time"
+            android:text="3:45"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="60sp"
+            android:layout_toRightOf="@+id/divider"/>
+
+        <TextView
+            android:id="@+id/amopm2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/starting"
+            android:layout_toRightOf="@+id/divider"
+            android:text="PM"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/timings"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/aheadText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingTop="10dp"
+            android:text="Patients ahead of you"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/aheadNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/waitingnumber"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="5dp"
+            android:text="4"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="80sp" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_layout2"
+            android:drawableBottom="@drawable/button_layout"
+            android:text="Refresh" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_layout2"
+            android:drawableBottom="@drawable/button_layout"
+            android:text="Cancel" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
